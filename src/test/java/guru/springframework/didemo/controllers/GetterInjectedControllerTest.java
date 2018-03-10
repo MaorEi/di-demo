@@ -12,6 +12,7 @@ public class GetterInjectedControllerTest {
     @Before
     public void setUp() throws Exception{
         this.getterInjectedController = new GetterInjectedController();
+        //If we don't give a greetinhServiceImplementation, in other words, unsatisfied dependency, we will get NP exception.
         this.getterInjectedController.setGreetingService(new GreetingServiceImpl());
     }
 

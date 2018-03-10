@@ -10,12 +10,13 @@ import org.springframework.stereotype.Controller;
 public class GetterInjectedController {
     private GreetingService greetingService;
 
-    public String sayHello(){
+    public String sayHello() {
         return greetingService.sayGreeting();
     }
-    @Autowired
 
-    public void setGreetingService(@Qualifier("getterGreetingService")GreetingService greetingService){
+    @Autowired
+    //is setter injection the @Qualifier annotation can be either the method level or inside the properties level.
+    public void setGreetingService(@Qualifier("getterGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 }
