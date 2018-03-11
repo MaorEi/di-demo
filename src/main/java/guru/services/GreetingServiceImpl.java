@@ -1,4 +1,4 @@
-package guru.springframework.didemo.services;
+package guru.services;
 
 import org.springframework.stereotype.Service;
 //Marking class as a service is also picked up a Spring component
